@@ -12,45 +12,43 @@ var nextBtn = $('.next');
 // Navigare tra le slide con il mouse
 
 // Next
-
 nextBtn.click(function(){
     // alert('avanti');
 
     nextPrevSlide('avanti');
-
 });
 
-
-
 // Prev
-
 prevBtn.click(function(){
     // alert('indietro');
     nextPrevSlide('indietro');
-
-
 });
 
+// Navigazione con Keyboard
 
+$(document).keydown(function(e){
+    // console.log(e);
+    console.log(e.keyCode);
+    console.log(e.key);
 
+    // if(e.keyCode == 37){
+    //     nextPrevSlide('indietro');
 
+    // } else if(e.keyCode == 39){
+    //     nextPrevSlide('avanti');
+    // }
 
+    if(e.key == 'ArrowLeft'){
+        nextPrevSlide('indietro');
 
-
-
-
-
-
-
-
-
+    } else if(e.key == 'ArrowRight'){
+        nextPrevSlide('avanti');
+    }
+})
 
 
 // End doc Ready
 })
-
-
-
 
 
 /****************************
@@ -86,8 +84,6 @@ function nextPrevSlide(direction){
     activeImg.removeClass('active');
 
     activeCircle.removeClass('active');
-
-
 
 
     // Next
