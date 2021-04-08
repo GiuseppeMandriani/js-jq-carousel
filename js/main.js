@@ -73,7 +73,7 @@ function nextPrevSlide(direction){
 
     var imgFirst = $('.images img.first');
 
-    var imgLast = $('.images img-last');
+    var imgLast = $('.images img.last');
 
     var activeCircle = $('.nav i.active');
 
@@ -104,8 +104,8 @@ function nextPrevSlide(direction){
     // Prev   
     } else if( direction === 'indietro'){
         if(activeImg.hasClass('first')){
-            imgFirst.addClass('active');
-            circleFirst.addClass('active');
+            imgLast.addClass('active');
+            circleLast.addClass('active');
         } else {
             activeImg.prev('img').addClass('active');
             activeCircle.prev('i').addClass('active');
